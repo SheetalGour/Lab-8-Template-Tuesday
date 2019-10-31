@@ -22,6 +22,7 @@ public class CityList {
         cities.add(city);
     }
 
+
     /**
      * This returns a sorted list of cities
      * @return

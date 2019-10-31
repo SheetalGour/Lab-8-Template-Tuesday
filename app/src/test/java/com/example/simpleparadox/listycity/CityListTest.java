@@ -60,7 +60,15 @@ class CityListTest {
         assertEquals(0, city.compareTo(cityList.getCities().get(0)));
         assertEquals(0, mockCity().compareTo(cityList.getCities().get(1)));
     }
-
+    @Test
+    void testGotNoCities() {
+        for (City c : cities) {
+            if (c.getCityName().equals(city.getCityName()) &&
+                    c.getProvinceName().equals(city.getProvinceName())) {
+                return false;
+            }
+        }
+    }
     @Test
     void testDeleteCity() {
         CityList cityList = mockCityList();
