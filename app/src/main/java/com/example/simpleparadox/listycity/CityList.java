@@ -22,6 +22,7 @@ public class CityList {
         cities.add(city);
     }
 
+
     /**
      * This returns a sorted list of cities
      * @return
@@ -77,4 +78,5 @@ public class CityList {
     public int countCities() {
         return cities.size();
     }
+
 }
