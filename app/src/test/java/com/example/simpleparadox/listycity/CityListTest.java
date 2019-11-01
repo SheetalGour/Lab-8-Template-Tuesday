@@ -60,15 +60,7 @@ class CityListTest {
         assertEquals(0, city.compareTo(cityList.getCities().get(0)));
         assertEquals(0, mockCity().compareTo(cityList.getCities().get(1)));
     }
-    @Test
-    void testGotNoCities() {
-        for (City c : cities) {
-            if (c.getCityName().equals(city.getCityName()) &&
-                    c.getProvinceName().equals(city.getProvinceName())) {
-                return false;
-            }
-        }
-    }
+
     @Test
     void testDeleteCity() {
         CityList cityList = mockCityList();
@@ -98,6 +90,14 @@ class CityListTest {
     @Test
     void testCountCities() {
         CityList cityList = mockCityList();
+
+        assertEquals(1, cityList.countCities());
+    }
+
+    @Test
+    void testTwoCities() {
+        CityList cityList = mockCityList();
+        cityList.add(new City("Regina", "Saskatchewan"));
 
         assertEquals(1, cityList.countCities());
     }
